@@ -9,13 +9,13 @@
 int _printf(const char *format, ...)
 {
 	int i = 0;
-	int print_char = 0;
+	int print_item = 0;
 
 	while (format[i])
 	{
 		_putchar(format[i]);
-		print_char++;
+		print_item++;
 		i++;
 	}
-	return (print_char);
+	return (print_item);
 }
