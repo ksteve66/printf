@@ -10,12 +10,28 @@ int _printf(const char *format, ...)
 {
 	int i = 0;
 	int print_item = 0;
+	va_list arg;
 
+	va_start(arg, format);
 	while (format[i])
 	{
-		_putchar(format[i]);
-		print_item++;
+		if (format[i] == '%')
+		{
+			switch (format[i + 1])
+			{
+				case 'c':
+					print_item += print_char(arg);
+					i += 2;
+					break;
+			}
+		}
+		if (format[i])
+		{
+			_putchar(format[i]);
+			print_item++;
+		}
 		i++;
 	}
+	va_end(arg);
 	return (print_item);
 }
