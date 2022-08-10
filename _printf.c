@@ -13,16 +13,23 @@ int _printf(const char *format, ...)
 	va_list arg;
 
 	va_start(arg, format);
+
+	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
+		return (-1);
+	if (format[0] == '%' && format[1] == ' ' && format[2] == '\0')
+		return (-1);
+
 	while (format[i])
 	{
-`		if (format[i] == '%')
+		if (format[i] == '%')
 		{
-			print(, arg);
+			print_item += print(format[++i], arg);
+			i++;
+			continue;
 		}
 		if (format[i])
 		{
-			_putchar(format[i]);
-			print_item++;
+			print_item += _putchar(format[i]);
 		}
 		i++;
 	}

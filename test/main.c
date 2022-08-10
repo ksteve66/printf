@@ -2,7 +2,7 @@
 
 #include <stdio.h>
 
-#include "main.h"
+#include "../main.h"
 
 
 
@@ -40,7 +40,7 @@ int main(void)
 
 					    _printf("Length:[%d, %i]\n", len, len);
 
-					        printf("Length:[%d, %i]\n", len2, len2);
+					        printf("Length:[%d, %i]\n", len, len2);
 
 						    _printf("Negative:[%d]\n", -762534);
 
