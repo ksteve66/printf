@@ -15,15 +15,9 @@ int _printf(const char *format, ...)
 	va_start(arg, format);
 	while (format[i])
 	{
-		if (format[i] == '%')
+`		if (format[i] == '%')
 		{
-			switch (format[i + 1])
-			{
-				case 'c':
-					print_item += print_char(arg);
-					i += 2;
-					break;
-			}
+			print(, arg);
 		}
 		if (format[i])
 		{
