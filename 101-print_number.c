@@ -20,5 +20,4 @@ int _print_number(int n)
 		_print_number(num / 10);
 	}
 	return (_putchar((num % 10) + '0'));
-	
 }
