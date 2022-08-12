@@ -20,13 +20,21 @@ int _printf(const char *format, ...)
 		return (-1);
 
 	while (format[i])
-	{
+	{	
 		if (format[i] == '%')
 		{
-			print_item += print(format[++i], arg);
+			if (format[++i] != '\0')
+			{
+				print_item += print(format[i], arg);
+			}
+			else
+			{
+				return (print_item);
+			}
 			i++;
 			continue;
 		}
+	
 		if (format[i])
 		{
 			print_item += _putchar(format[i]);
