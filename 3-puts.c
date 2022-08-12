@@ -10,10 +10,10 @@ int _puts(char *str)
 
 	if (str == NULL)
 	{
-		return (_puts("(NULL)"));
+		return (_puts("(null)"));
 	}
 
-	for (i = 0; str[i] != '\0'; str++)
+	for (i = 0; str[i] != '\0'; i++)
 	{
 		_putchar(str[i]);
 	}
