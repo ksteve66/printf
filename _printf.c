@@ -20,7 +20,7 @@ int _printf(const char *format, ...)
 		return (-1);
 
 	while (format[i])
-	{	
+	{
 		if (format[i] == '%')
 		{
 			if (format[++i] != '\0')
@@ -34,7 +34,7 @@ int _printf(const char *format, ...)
 			i++;
 			continue;
 		}
-	
+
 		if (format[i])
 		{
 			print_item += _putchar(format[i]);
