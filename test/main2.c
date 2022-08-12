@@ -4,9 +4,8 @@
 
 int main(void)
 {
-	int Len = 0;
-	
-	Len =_printf("hello %s A\n", "world\n");
+	int Len = -562;
+
 	printf("%i\n", Len);
 
 	return (0);
