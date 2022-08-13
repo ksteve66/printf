@@ -19,7 +19,7 @@ int print(char c, va_list vlist)
 			return (_putchar('%'));
 		case 'd':
 		case 'i':
-			return (_print_number(va_arg(vlist, int)));
+			return (print_number(va_arg(vlist, int)));
 		default:
 			return (_putchar('%') + _putchar(c));
 	}

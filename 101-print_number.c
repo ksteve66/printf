@@ -5,19 +5,33 @@
  * Return: 0
  */
 
-int _print_number(int n)
+unsigned int print_number(int n)
 {
-	unsigned int num = n;
+	unsigned int m, d, count, tot = 0;
 
 	if (n < 0)
 	{
-		_putchar('-');
-		num = -num;
+		_putchar(45);
+		tot++;
+		m = n * -1;
+	}
+	else
+	{
+		m = n;
+	}
+	d = m;
+	count = 1;
+
+	while (d > 9)
+	{
+		d /= 10;
+		count *= 10;
 	}
 
-	if ((num / 10) > 0)
+	for (; count >= 1; count /= 10)
 	{
-		_print_number(num / 10);
+		_putchar(((m / count) % 10) + 48);
+		tot++;
 	}
-	return (_putchar((num % 10) + '0'));
+	return (tot);
 }

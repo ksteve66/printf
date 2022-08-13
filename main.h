@@ -9,6 +9,6 @@ int _printf(const char *format, ...);
 int print_char(va_list arg);
 int print(char c, va_list vlist);
 int _puts(char *str);
-int _print_number(int n);
+unsigned int print_number(int n);
 
 #endif /* MAIN_H */
