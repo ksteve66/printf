@@ -10,5 +10,6 @@ int print_char(va_list arg);
 int print(char c, va_list vlist);
 int _puts(char *str);
 unsigned int print_number(int n);
+int print_rev(char *s);
 
 #endif /* MAIN_H */

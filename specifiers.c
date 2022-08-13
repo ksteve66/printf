@@ -20,6 +20,8 @@ int print(char c, va_list vlist)
 		case 'd':
 		case 'i':
 			return (print_number(va_arg(vlist, int)));
+		case 'r':
+			return (print_rev(va_arg(vlist, char*)));
 		default:
 			return (_putchar('%') + _putchar(c));
 	}
